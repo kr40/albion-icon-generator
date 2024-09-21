@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Albion Online Icon Renderer</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="card">
+			<div class="card-header">
+				<h1 class="card-title">Albion Online Icon Renderer</h1>
+			</div>
+			<div class="card-content">
+				<!-- Icon Type selection -->
+				<div class="section">
+					<label>Icon Type</label>
+					<div class="button-group" id="iconTypeButtons">
+						<!-- Buttons will be generated here -->
+					</div>
+				</div>
+
+				<!-- Item options (shown only when iconType is 'item') -->
+				<div id="itemOptions" style="display: none">
+					<!-- Tier selection -->
+					<div class="section">
+						<label>Tier</label>
+						<div class="button-group" id="tierButtons">
+							<!-- Tier buttons -->
+						</div>
+					</div>
+					<!-- Enchantment selection -->
+					<div class="section">
+						<label>Enchantment</label>
+						<div class="button-group" id="enchantmentButtons">
+							<!-- Enchantment buttons -->
+						</div>
+					</div>
+					<!-- Quality selection -->
+					<div class="section">
+						<label>Quality</label>
+						<div class="button-group" id="qualityButtons">
+							<!-- Quality buttons -->
+						</div>
+					</div>
+					<!-- Item Name input -->
+					<div class="section">
+						<label for="itemName">Item Name</label>
+						<input type="text" id="itemName" placeholder="e.g., Battleaxe" />
+					</div>
+				</div>
+
+				<!-- Identifier input (shown when iconType is not 'item') -->
+				<div id="identifierSection" style="display: none">
+					<div class="section">
+						<label for="identifier">Identifier</label>
+						<input type="text" id="identifier" placeholder="e.g., Adept's Battleaxe" />
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<button id="renderButton">Render Icon</button>
+			</div>
+			<!-- Rendered Icon and URL -->
+			<div id="renderedIconSection" style="display: none">
+				<div class="card-content">
+					<div class="icon-display">
+						<img id="renderedIcon" src="" alt="Rendered Icon" />
+						<p id="imageUrlText"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
